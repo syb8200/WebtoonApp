@@ -14,10 +14,21 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.webView.apply {
-            webViewClient = WebViewClient()
-            settings.javaScriptEnabled = true
-            loadUrl("https://www.naver.com")
+        binding.button1.setOnClickListener {
+            // supportFragmentManager : activity 내부에서 fragment 관리해주는 역할
+            // transaction : 작업의 단위
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragmentContainer, WebViewFragment())
+                commit()
+            }
         }
+
+        binding.button2.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragmentContainer, BFragment())
+                commit()
+            }
+        }
+
     }
 }
