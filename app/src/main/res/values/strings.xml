@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FC_2_chapter1</string>
+    <string name="backToHistory">마지막 시점 돌아가기</string>
+    <string name="changeTabName">앱 이름 바꾸기</string>
 </resources>
