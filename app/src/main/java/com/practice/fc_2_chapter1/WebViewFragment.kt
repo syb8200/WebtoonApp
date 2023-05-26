@@ -10,7 +10,7 @@ import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import com.practice.fc_2_chapter1.databinding.FragmentWebviewBinding
 
-class WebViewFragment(private val position : Int) : Fragment() {
+class WebViewFragment(private val position : Int, private val webViewUrl : String) : Fragment() {
 
     private lateinit var binding : FragmentWebviewBinding
 
@@ -34,7 +34,7 @@ class WebViewFragment(private val position : Int) : Fragment() {
                 }
             }
             settings.javaScriptEnabled = true
-            loadUrl("https://comic.naver.com/webtoon/detail?titleId=183559&no=566")
+            loadUrl(webViewUrl)
         }
 
         binding.backToLastButton.setOnClickListener {
